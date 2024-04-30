@@ -69,7 +69,7 @@ app.UseEndpoints(endpoints =>
 app.UseHttpsRedirection();
 
 // fix bug
-
+// add here
 app.UseSwagger();
 app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "API v1"));
 
