@@ -28,11 +28,11 @@ builder.Services.AddScoped<IListNotesService, ListNotesService>();
 
 builder.Services.AddControllers();
 
-builder.Services.AddCors(options =>
+builder.Services.AddCors(options => 
 {
     options.AddDefaultPolicy(builder =>
     {
-        builder.WithOrigins("http://localhost:3000")
+        builder.WithOrigins("http://localhost:3000") 
             .AllowAnyHeader()
             .AllowAnyMethod()
             .AllowCredentials();
@@ -68,8 +68,8 @@ app.UseEndpoints(endpoints =>
 });
 app.UseHttpsRedirection();
 
-
-
+// fix bug
+// add here
 app.UseSwagger();
 app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "API v1"));
 
